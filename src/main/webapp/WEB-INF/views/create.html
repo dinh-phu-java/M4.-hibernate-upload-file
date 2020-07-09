@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Page</title>
+</head>
+<body>
+    <h1>Create Page</h1>
+
+<form th:action="@{/student/create}" th:object="${studentForm}" method="post" enctype="multipart/form-data">
+    Name: <input type="text" th:field="*{name}"> <br>
+    Avatar: <input type="file" th:field="*{file}"> <br>
+    <input type="submit" value="submit">
+</form>
+</body>
+</html>
